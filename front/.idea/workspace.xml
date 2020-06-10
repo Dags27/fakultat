@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bb8700ae-dd68-4e50-b0b9-f980700911bd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/hooks/useService.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/todo.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/actions/todos.actions.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducers/todos.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/selectors/todos.selectors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/store.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/todoPanel/TodoPanel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bOOKaWwutmUxYSjgg3t6AJlFum" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="M:/Projects/growUperion-frontend" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="ts.external.directory.path" value="C:\Users\Viking\Desktop\UWM\UWM_Lessons\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb8700ae-dd68-4e50-b0b9-f980700911bd" name="Default Changelist" comment="" />
+      <created>1588499609905</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588499609905</updated>
+      <workItem from="1588499611637" duration="6891000" />
+      <workItem from="1588600437355" duration="166000" />
+      <workItem from="1588600654381" duration="305000" />
+      <workItem from="1589204874176" duration="7792000" />
+      <workItem from="1589468067593" duration="2404000" />
+      <workItem from="1589809291455" duration="7241000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1826" y="945" key="#ESLint" timestamp="1588600718019">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1826" y="945" key="#ESLint/0.0.3840.2120@0.0.3840.2120" timestamp="1588600718019" />
+    <state x="1559" y="1043" key="#Inspections" timestamp="1588505768755">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1559" y="1043" key="#Inspections/0.0.3840.2120@0.0.3840.2120" timestamp="1588505768755" />
+    <state x="1736" y="1188" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588502426837">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1736" y="1188" key="#com.intellij.fileTypes.FileTypeChooser/0.0.3840.2120@0.0.3840.2120" timestamp="1588502426837" />
+    <state x="1747" y="1125" key="FileChooserDialogImpl" timestamp="1589809560597">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1747" y="1125" key="FileChooserDialogImpl/0.0.3840.2120@0.0.3840.2120" timestamp="1589809560597" />
+    <state x="1533" y="1347" key="SettingsEditor" timestamp="1589206509799">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1533" y="1347" key="SettingsEditor/0.0.3840.2120@0.0.3840.2120" timestamp="1589206509799" />
+    <state x="1874" y="1278" width="607" height="536" key="find.popup" timestamp="1589816504072">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1874" y="1278" width="607" height="536" key="find.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1589816504072" />
+    <state x="1730" y="679" key="run.anything.popup" timestamp="1589208256420">
+      <screen x="0" y="0" width="3840" height="2120" />
+    </state>
+    <state x="1730" y="679" key="run.anything.popup/0.0.3840.2120@0.0.3840.2120" timestamp="1589208256420" />
+  </component>
+</project>

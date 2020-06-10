@@ -2,9 +2,10 @@ import http, { URL } from './utils';
 
 const API = {
   SEARCH_BY_NAME: (name: string) => `${URL}&s=${name}`,
-  SEARCH_BY_ID: (id: string) => `${URL}&i=${id}&plot=full`,
+  SEARCH_BY_ID: (id: string) => `${URL}&i=${id}&plot=full`,   // &plot=full -> prosi o cala fabule filmu
 };
 
+// Typy danych z API
 interface IMovieSearchResponseMovie {
   Poster: string;
   Title: string;
@@ -87,12 +88,12 @@ interface IMovieProps {
 const movieService = {
   searchByName: async (name: string) => {
     try {
-      const searchResult: IMovieSearchResponse = await http.get(API.SEARCH_BY_NAME(name));
-      if (searchResult?.Error) {
+      const searchResult: IMovieSearchResponse = await http.get(API.SEARCH_BY_NAME(name));   // pobiera liste filmow z API
+      if (searchResult?.Error) {          // W razie bledu wywal blad
         console.log(searchResult.Error);
         return null;
       } else {
-        const result: IMoviesProps = {
+        const result: IMoviesProps = {    // Przypisz dane do zmiennej
           totalResults: parseInt(searchResult.totalResults, 10),
           movies: searchResult.Search.map((movie) => ({
             id: movie.imdbID,
@@ -102,7 +103,7 @@ const movieService = {
             year: movie.Year
           })),
         };
-        return result;
+        return result;                    // Zwraca liste
       }
     } catch (e) {
       console.log(e);
@@ -111,14 +112,13 @@ const movieService = {
   },
   searchById: async (id: string) => {
     try {
-      const resultById: IMovieResponse = await http.get(API.SEARCH_BY_ID(id));
-      if (resultById?.Error) {
+      const resultById: IMovieResponse = await http.get(API.SEARCH_BY_ID(id));    // Pobiera film po ID
+      if (resultById?.Error) {              // W razie bledu wywal blad
         console.log(resultById.Error);
         return null;
       } else {
-        console.log("XD");
         console.log(resultById);
-        return resultById;
+        return resultById;                  // Zwroc film
       }
     } catch (e) {
       console.log(e);

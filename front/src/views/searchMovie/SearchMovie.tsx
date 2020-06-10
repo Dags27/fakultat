@@ -63,7 +63,8 @@ const useStyles = makeStyles({
   },
   buttonUs:{
     marginTop:"10px",
-    width:"10em"
+    width:"10em",
+    marginBottom: "20px"
   },
   buttonFav:{
     marginTop:"10px",
@@ -74,13 +75,13 @@ const useStyles = makeStyles({
 
 const SearchMovie = () => {
   const classes = useStyles();
-  const [movies, setMovies] = React.useState<IMoviesProps | null>(null);
-  const [movieToSearch, setMovieToSearch] = React.useState('');
+  const [movies, setMovies] = React.useState<IMoviesProps | null>(null);    // Wszystkie pobrane filmy
+  const [movieToSearch, setMovieToSearch] = React.useState('');             // Nazwa filmu do szukania
 
-  const [movie, setMovie] = React.useState<IMovieResponse | null>(null); 
-  const [subSite, setSubSite] = React.useState<number>(0);   /// 0 - search, 1 - detail // 2 - to watch list
+  const [movie, setMovie] = React.useState<IMovieResponse | null>(null);    // Wybrany film
+  const [subSite, setSubSite] = React.useState<number>(0);   /// 0 - search, 1 - detail // 2 - to watch list  -> Który ekran otworzyć
 
-  const [watchList, setWatchList] = React.useState<Array<IMovieResponse>>([]);
+  const [watchList, setWatchList] = React.useState<Array<IMovieResponse>>([]);  // Tablica filmów dodanych do ulubionych/WatchList
 
   React.useEffect(() => {
     movieService.searchByName(movieToSearch).then(resp => {
@@ -91,31 +92,32 @@ const SearchMovie = () => {
 
   }, [movieToSearch]);
 
-  let addToWatch = () => {
+  let addToWatch = () => {    // Dodaje obecnie oglądany film do listy "watchList"
     let newWathList = new Array<IMovieResponse>();
     let isAdded = false;
 
-    watchList.forEach(el => {
-      newWathList.push(el);
-      if(el?.imdbID === movie?.imdbID) {
+    watchList.forEach(el => {             // Przechodze przez kazdy film
+      newWathList.push(el);               // Dodaje go do nowe listy
+
+      if(el?.imdbID === movie?.imdbID) {  // Jesli film juz jest dodany, to zapamietujemy to
         isAdded = true;
       }
     });
 
-    if(movie !== null && !isAdded) {
+    if(movie !== null && !isAdded) {      // Jesli nie dodany, wrzuc na koniec listy
       newWathList.push(movie);
     }
 
     setWatchList(newWathList);
 
-    selectSearchlist();
+    selectSearchlist();                   // Wroc na ekran wyszukiwania
   }
   
-  let removeFromWatch = (id: string) => {
+  let removeFromWatch = (id: string) => {   // Usuwamy film z listy
     let newWathList = new Array<IMovieResponse>();
 
-    watchList.forEach(el => {
-      if(el?.imdbID !== id) {
+    watchList.forEach(el => {       // Przechodze przez kazdy film
+      if(el?.imdbID !== id) {       // Jeżeli dany film, jest do usunięcia, to nie dodajemy go do listy
         newWathList.push(el);
       }
     });
@@ -123,8 +125,13 @@ const SearchMovie = () => {
     setWatchList(newWathList);
   }
 
+  /// Przejscie miedzy oknami
   let selectSearchlist = () => {
     setSubSite(0);
+  }
+  
+  let selectWatchList = () => {
+    setSubSite(2);
   }
 
   let selectMovie = (id: string) => {
@@ -135,10 +142,6 @@ const SearchMovie = () => {
     });
 
     setSubSite(1);
-  }
-
-  let selectWatchList = () => {
-    setSubSite(2);
   }
 
   if(subSite === 0) {
@@ -241,6 +244,7 @@ const SearchMovie = () => {
     </div>
     )
   }
+  
 };
 
 export default SearchMovie;
